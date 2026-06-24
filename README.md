@@ -5,14 +5,11 @@ This repo holds infraspecdev's **org-wide community health files** (which GitHub
 ## Use the README template
 
 1. Copy [`README.template.md`](./README.template.md) into your repo as `README.md`.
-2. Replace the `<PLACEHOLDERS>`.
-3. **Delete every section that doesn't apply** — the template is organized as:
-   - **Keep always** — Overview, Quick Start, Contributing, License.
-   - **Pick your type** — keep the one block matching your repo (Terraform module, Go CLI, web app, GitHub Action, etc.); delete the rest.
-   - **Public repos only** — keep Support/Maintainers, Security, Acknowledgments; internal repos use Status & Owners instead.
+2. Replace the `<PLACEHOLDERS>` and fill each section.
+3. Delete the **Configuration** section if there's nothing to configure.
 4. Remove the instructional `<!-- comments -->` as you go.
 
-That's it — no tooling to install.
+The template is seven universal sections — **Overview, Getting Started, Usage, Local Development, Configuration, Contributing, License** — that fit any project. Keep the headings as-is so READMEs look consistent across the org. No tooling to install.
 
 ## What auto-cascades vs. what you copy
 
