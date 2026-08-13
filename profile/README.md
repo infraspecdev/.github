@@ -6,10 +6,10 @@ Built by Chetan Kothari, Vijay Dhama, and Abhishek Sangwan, and the stellar cast
 
 ## What we work on
 
-- **Observability** — OpenTelemetry, SigNoz, Grafana, and monitoring automation.
-- **Infrastructure as Code** — reusable Terraform modules (`terraform-aws-*`) and Atmos-based live environments.
-- **Platform & tooling** — Go services and CLIs, internal bots, and developer tooling.
-- **Applications** — internal products and AI/ML experiments.
+- **Observability** - OpenTelemetry, SigNoz, Grafana, and monitoring automation.
+- **Infrastructure as Code** - reusable Terraform modules (`terraform-aws-*`) and Atmos-based live environments.
+- **Platform & tooling** - Go services and CLIs, internal bots, and developer tooling.
+- **Applications** - internal products and AI/ML experiments.
 
 ## Repo conventions
 
