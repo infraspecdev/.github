@@ -1,13 +1,14 @@
 <!-- This file renders on the infraspecdev GitHub org landing page (github.com/infraspecdev). -->
 # infraspec.dev
 
-Cloud & DevOps engineering — infrastructure, observability, and platform tooling.
+Observability, Cloud and DevOps engineering, infrastructure and platform tooling.
+Built by Chetan Kothari, Vijay Dhama, and Abhishek Sangwan, and the stellar cast of engineers who work alongside them.
 
 ## What we work on
 
+- **Observability** — OpenTelemetry, SigNoz, Grafana, and monitoring automation.
 - **Infrastructure as Code** — reusable Terraform modules (`terraform-aws-*`) and Atmos-based live environments.
 - **Platform & tooling** — Go services and CLIs, internal bots, and developer tooling.
-- **Observability** — OpenTelemetry, SigNoz, Grafana, and monitoring automation.
 - **Applications** — internal products and AI/ML experiments.
 
 ## Repo conventions
