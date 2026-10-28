@@ -1,0 +1,28 @@
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches: [$default-branch]
+
+permissions:
+  contents: read
+
+# Cancel superseded PR runs; let runs on the default branch finish.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  check:
+    # Runs on the org's self-hosted runner when the RUNS_ON org variable is set,
+    # otherwise on GitHub-hosted ubuntu-latest. Public repos always fall back.
+    # See https://github.com/infraspecdev/.github#run-workflows-on-the-org-runner
+    runs-on: ${{ fromJSON(vars.RUNS_ON || '["ubuntu-latest"]') }}
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      # Replace with this repo's build, lint and test commands.
+      - run: make check

@@ -1,0 +1,5 @@
+{
+  "name": "CI (org runner)",
+  "description": "Build and test on the infraspecdev self-hosted runner, falling back to GitHub-hosted runners.",
+  "categories": ["Continuous integration"]
+}
