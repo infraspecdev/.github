@@ -33,12 +33,14 @@ runs-on: ${{ fromJSON(vars.RUNS_ON || '["ubuntu-latest"]') }}
 
 **Org settings** (an org admin sets these once):
 
-1. **Runner group** (*Settings → Actions → Runner groups*) — leave **Allow public repositories** off and give access to selected private repos only. A fork PR on a public repo could otherwise run arbitrary code on the runner.
-2. **`RUNS_ON` variable** (*Settings → Secrets and variables → Actions → Variables*) — a JSON array of the runner's labels, e.g. `["self-hosted","linux"]`. Set **Repository access** to *Private repositories*.
+1. **Runner group** (*Settings → Actions → Runner groups*) — leave **Allow public repositories** off. A fork PR on a public repo could otherwise run arbitrary code on the runner.
+2. **`RUNS_ON` variable** (*Settings → Secrets and variables → Actions → Variables*) — `["self-hosted","linux","arm64"]`. Set **Repository access** to *Private repositories*.
 
 Public repos don't see the variable, so they fall back to `ubuntu-latest`. GitHub-hosted minutes are free for public repos, so nothing is lost.
 
 **Opt a repo out:** set a repo-level `RUNS_ON` variable (e.g. `["ubuntu-latest"]`). Repo variables override org variables of the same name.
+
+**The org runners are ARM64** (Raspberry Pis `pi5` and `pi6`). Before switching a repo, check its jobs work on arm64: x64-only binaries fail, and `linux/amd64` image builds run under emulation. Keep those jobs on `ubuntu-latest` with a repo-level override.
 
 **Runner requirements:** the runner needs whatever the jobs use — Docker and buildx for image builds, QEMU for multi-arch — and must not leak state between jobs (ephemeral runners, or clean the workspace).
 
